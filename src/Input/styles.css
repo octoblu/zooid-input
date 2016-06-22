@@ -31,6 +31,11 @@
   cursor: not-allowed;
 }
 
+.Input[required]:focus {
+ border: 1px solid #fec57b !important;
+ background-color: #fff9f2 !important;
+}
+
 .Label {
   font-weight: bold;
   margin-bottom: 8px;

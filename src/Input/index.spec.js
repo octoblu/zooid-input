@@ -13,10 +13,18 @@ chai.use(sinonChai)
 
 describe('<Input />', () => {
   describe('when given no props', () => {
+    let sut
+
+    beforeEach(() => {
+      sut = mount(<Input />)
+    })
+
     it('should set the default props', () => {
-      const sut = mount(<Input />)
       expect(sut).to.have.prop('name', '')
-      expect(sut).to.have.prop('label', '')
+    })
+
+    it('should not render the label', () => {
+      expect(sut).to.not.contain(<label />)
     })
   })
 
@@ -52,6 +60,21 @@ describe('<Input />', () => {
     it('should render the input as disabled', () => {
       const sut = shallow(<Input disabled />)
       expect(sut).to.have.className(styles['is-disabled'])
+    })
+  })
+
+  describe('when required prop is truthy', () => {
+    it('should add the is-required class to the input', () => {
+      const sut = shallow(<Input required />)
+      expect(sut).to.have.className(styles['is-required'])
+    })
+  })
+
+  describe('when given unspecified props', () => {
+    it('should merge the props with <input /> props', () => {
+      const sut = mount(<Input required />)
+      const inputField = sut.find('input[type="text"]')
+      expect(inputField).to.have.prop('required', true)
     })
   })
 })

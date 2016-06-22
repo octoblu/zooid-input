@@ -9,31 +9,37 @@ const propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  required: PropTypes.bool,
 }
 const defaultProps = {
   disabled: false,
   name: '',
-  label: '',
+  required: false,
 }
 
-const Input = ({ className, disabled, label, name, placeholder }) => {
+const Input = (props) => {
+  const { className, disabled, label, name, placeholder, required } = props
   const classes = classNames(
     styles.Root,
     { [`${styles['is-disabled']}`]: disabled },
+    { [`${styles['is-required']}`]: required },
     className
   )
+
   return (
     <div className={classes}>
-      <label htmlFor={name} className={styles.Label}>{label}</label>
+      {label && <label htmlFor={name} className={styles.Label}>{label}</label>}
       <input
+        {...props}
         className={styles.Input}
-        type="text"
+        disabled={disabled}
         name={name}
         placeholder={placeholder}
-        disabled={disabled}
-        />
+        required={required}
+        type="text"
+      />
     </div>
-    )
+  )
 }
 
 Input.propTypes    = propTypes

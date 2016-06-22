@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 
 import Input from '../src'
 
@@ -15,4 +15,7 @@ storiesOf('Input', module)
   ))
   .add('Disabled', () => (
     <Input disabled />
+  ))
+  .add('Required', () => (
+    <Input required />
   ))
