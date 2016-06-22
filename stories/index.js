@@ -7,3 +7,12 @@ storiesOf('Input', module)
   .add('Basic', () => (
     <Input />
   ))
+  .add('With Label', () => (
+    <Input label="Awesome Label" />
+  ))
+  .add('With Placeholder', () => (
+    <Input placeholder="You should use a placeholder :D" />
+  ))
+  .add('Disabled', () => (
+    <Input disabled />
+  ))
