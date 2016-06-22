@@ -1,6 +1,6 @@
 {
   "name": "zooid-input",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Input",
   "main": "dist/bundle.js",
   "scripts": {
