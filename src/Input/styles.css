@@ -39,3 +39,10 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
+
+.Label-required {
+  border: none;
+  color: #c23934;
+  margin-right: 0.2em;
+  display: inline;
+}
