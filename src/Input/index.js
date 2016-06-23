@@ -28,7 +28,9 @@ const Input = (props) => {
 
   return (
     <div className={classes}>
-      {label && <label htmlFor={name} className={styles.Label}>{label}</label>}
+      {label && <label htmlFor={name} className={styles.Label}>
+        {required && label && <span className={styles['Label-required']}>*</span>}{label}
+      </label>}
       <input
         {...props}
         className={styles.Input}

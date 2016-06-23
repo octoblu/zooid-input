@@ -19,3 +19,6 @@ storiesOf('Input', module)
   .add('Required', () => (
     <Input required />
   ))
+  .add('Required With Label', () => (
+    <Input label="Name" required />
+  ))
