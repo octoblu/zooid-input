@@ -4,21 +4,21 @@ import { storiesOf } from '@kadira/storybook'
 import Input from '../src'
 
 storiesOf('Input', module)
-  .add('Basic', () => (
+  .addWithInfo('Basic', 'A text input with no props provided', () => (
     <Input />
   ))
-  .add('With Label', () => (
+  .addWithInfo('With Label', 'A text input with an awesome label', () => (
     <Input label="Awesome Label" />
   ))
-  .add('With Placeholder', () => (
+  .addWithInfo('With Placeholder', 'A text input with the placeholder provided', () => (
     <Input placeholder="You should use a placeholder :D" />
   ))
-  .add('Disabled', () => (
+  .addWithInfo('Disabled', 'A disabled text input', () => (
     <Input disabled />
   ))
-  .add('Required', () => (
+  .addWithInfo('Required', 'A required text input', () => (
     <Input required />
   ))
-  .add('Required With Label', () => (
+  .addWithInfo('Required With Label', 'The required text input with label', () => (
     <Input label="Name" required />
   ))
