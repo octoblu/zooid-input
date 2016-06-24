@@ -1,7 +1,6 @@
 .root {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
   position: relative;
 }
 
@@ -11,10 +10,12 @@
   display: block;
   padding: 0.5em;
   width: 100%;
+  margin-bottom: 16px;
   background: #FFF;
   font-size: 16px;
   font-family: "citrixsans-regular", sans-serif;
   -webkit-appearance: none;
+
 }
 
 .input:focus {
