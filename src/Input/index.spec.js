@@ -1,7 +1,6 @@
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 import React from 'react'
-import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 import { mount, shallow } from 'enzyme'
 
@@ -52,7 +51,7 @@ describe('<Input />', () => {
   describe('when given a class name', () => {
     it('should add the class name in to the text input', () => {
       const sut = shallow(<Input className="catsAreAwesome" />)
-      expect(sut).to.have.className("catsAreAwesome")
+      expect(sut).to.have.className('catsAreAwesome')
     })
   })
 

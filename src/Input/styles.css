@@ -1,15 +1,15 @@
-.Root {
+.root {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   position: relative;
 }
 
-.Input {
+.input {
   border-radius: 2px;
   border: 1px solid #E6EAED;
   display: block;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   width: 100%;
   background: #FFF;
   font-size: 16px;
@@ -17,7 +17,7 @@
   -webkit-appearance: none;
 }
 
-.Input:focus {
+.input:focus {
   border: 1px solid #14568F;
   outline: none;
   background-color: #f8fdff;
@@ -25,24 +25,12 @@
   transition: all 0.2s ease-in;
 }
 
-.Input[disabled] {
+.input[disabled] {
   background-color: #F3F6F7;
   cursor: not-allowed;
 }
 
-.Input[required]:focus {
+.input[required]:focus {
  border: 1px solid #fec57b !important;
  background-color: #fff9f2 !important;
-}
-
-.Label {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.Label-required {
-  border: none;
-  color: #c23934;
-  margin-right: 0.2em;
-  display: inline;
 }

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
 
+import InputLabel from '../InputLabel/'
 import styles from './styles.css'
 
 const propTypes = {
@@ -11,6 +12,7 @@ const propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
 }
+
 const defaultProps = {
   disabled: false,
   name: '',
@@ -20,7 +22,7 @@ const defaultProps = {
 const Input = (props) => {
   const { className, disabled, label, name, placeholder, required } = props
   const classes = classNames(
-    styles.Root,
+    styles.root,
     { [`${styles['is-disabled']}`]: disabled },
     { [`${styles['is-required']}`]: required },
     className
@@ -28,12 +30,11 @@ const Input = (props) => {
 
   return (
     <div className={classes}>
-      {label && <label htmlFor={name} className={styles.Label}>
-        {required && label && <span className={styles['Label-required']}>*</span>}{label}
-      </label>}
+      <InputLabel name={name} required>{label}</InputLabel>
+
       <input
         {...props}
-        className={styles.Input}
+        className={styles.input}
         disabled={disabled}
         name={name}
         placeholder={placeholder}
