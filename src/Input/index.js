@@ -12,39 +12,67 @@ const propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
+  showHelp: PropTypes.bool,
 }
 
 const defaultProps = {
   disabled: false,
   name: '',
   required: false,
+  showHelp: false,
 }
 
-const Input = (props) => {
-  const { className, disabled, helpText, label, name, placeholder, required } = props
-  const classes = classNames(
-    styles.root,
-    { [`${styles['is-disabled']}`]: disabled },
-    { [`${styles['is-required']}`]: required },
-    className
-  )
+class Input extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <div className={classes}>
-      <InputLabel name={name} required={required}>{label}</InputLabel>
+    this.state = {
+      showHelp: this.props.showHelp,
+    }
 
-      <input
-        {...props}
-        className={styles.input}
-        disabled={disabled}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-        type="text"
-      />
-      {helpText && <span className={styles.helpText}>{helpText}</span>}
-    </div>
-  )
+  }
+
+  handleShowHelpText = () => {
+    this.setState({
+      showHelp: !this.state.showHelp
+    })
+  }
+
+  render() {
+    let { showHelp } = this.state
+    const { className, disabled, helpText, label, name, placeholder, required } = this.props
+    const classes = classNames(
+      styles.root,
+      { [`${styles['is-disabled']}`]: disabled },
+      { [`${styles['is-required']}`]: required },
+      className
+    )
+
+
+    return (
+      <div className={classes}>
+        <InputLabel
+          name={name}
+          required={required}
+          helpText={helpText}
+          showHelpText={this.handleShowHelpText}
+        >
+          {label}
+        </InputLabel>
+
+        <input
+          {...this.props}
+          className={styles.input}
+          disabled={disabled}
+          name={name}
+          placeholder={placeholder}
+          required={required}
+          type="text"
+        />
+        {showHelp && <span className={styles.helpText}>{helpText}</span>}
+      </div>
+    )
+  }
 }
 
 Input.propTypes    = propTypes
