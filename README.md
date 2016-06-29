@@ -14,6 +14,7 @@ npm install --save zooid-input
 | name        | string |   ' '   | name value for the input             |
 | placeholder | string |         | placeholder text for the input box   |
 | required    | bool   |         | Makes the text input required        |
+| helpText    | string |         | Help text for the input field        |
 
 
 

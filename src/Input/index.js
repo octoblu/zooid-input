@@ -7,6 +7,7 @@ import styles from './styles.css'
 const propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
+  helpText: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
@@ -20,7 +21,7 @@ const defaultProps = {
 }
 
 const Input = (props) => {
-  const { className, disabled, label, name, placeholder, required } = props
+  const { className, disabled, helpText, label, name, placeholder, required } = props
   const classes = classNames(
     styles.root,
     { [`${styles['is-disabled']}`]: disabled },
@@ -30,7 +31,7 @@ const Input = (props) => {
 
   return (
     <div className={classes}>
-      <InputLabel name={name} required>{label}</InputLabel>
+      <InputLabel name={name} required={required}>{label}</InputLabel>
 
       <input
         {...props}
@@ -41,6 +42,7 @@ const Input = (props) => {
         required={required}
         type="text"
       />
+      {helpText && <span className={styles.helpText}>{helpText}</span>}
     </div>
   )
 }

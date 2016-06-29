@@ -69,6 +69,20 @@ describe('<Input />', () => {
     })
   })
 
+  describe('when given helpText props', () => {
+    it('should render the helpText', () => {
+      const sut = mount(<Input helpText="Cats are awesome" />)
+      expect(sut).to.contains.text('Cats are awesome')
+    })
+  })
+
+  describe('when given no helpText prop', () => {
+    it('should not render the helpText', () => {
+      const sut = mount(<Input />)
+      expect(sut.find('span')).to.not.exist
+    })
+  })
+
   describe('when given unspecified props', () => {
     it('should merge the props with <input /> props', () => {
       const sut = mount(<Input required />)

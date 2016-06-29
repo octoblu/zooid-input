@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  font-size: 16px;
 }
 
 .input {
@@ -10,12 +11,11 @@
   display: block;
   padding: 0.5em;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 0.25em;
+  font-size: 1em;
   background: #FFF;
-  font-size: 16px;
   font-family: "citrixsans-regular", sans-serif;
   -webkit-appearance: none;
-
 }
 
 .input:focus {
@@ -34,4 +34,9 @@
 .input[required]:focus {
  border: 1px solid #fec57b !important;
  background-color: #fff9f2 !important;
+}
+
+.helpText {
+  font-size: 0.8em;
+  color: #6e798b;
 }

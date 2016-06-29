@@ -22,3 +22,6 @@ storiesOf('Input', module)
   .addWithInfo('Required With Label', 'The required text input with label', () => (
     <Input label="Name" required />
   ))
+  .addWithInfo('Help Text', 'The standard input with help text added', () => (
+    <Input label="Name" helpText="This text should help" />
+  ))
