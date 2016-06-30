@@ -22,9 +22,9 @@ storiesOf('Input', module)
   .addWithInfo('Required With Label', 'The required text input with label', () => (
     <Input label="Name" required />
   ))
-  .addWithInfo('Help Text', 'The standard input with help text added', () => (
-    <Input label="Name" helpText="This text should help" />
+  .addWithInfo('Description', 'The standard input with help text added', () => (
+    <Input label="Name" description="This text should help" />
   ))
   .addWithInfo('Show Help Text On Load', 'Toggles the help text to be shown', () => (
-    <Input label="Name" helpText="This text should help" showHelp />
+    <Input label="Name" description="This text should help" />
   ))

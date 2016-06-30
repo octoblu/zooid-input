@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .input {
@@ -32,11 +32,11 @@
 }
 
 .input[required]:focus {
- border: 1px solid #fec57b !important;
- background-color: #fff9f2 !important;
+ border: 1px solid #fec57b;
+ background-color: #fff9f2;
 }
 
-.helpText {
+.description {
   font-size: 0.8em;
   color: #6e798b;
 }

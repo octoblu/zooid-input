@@ -7,40 +7,35 @@ import styles from './styles.css'
 const propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  helpText: PropTypes.string,
+  description: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  showHelp: PropTypes.bool,
 }
 
 const defaultProps = {
   disabled: false,
   name: '',
   required: false,
-  showHelp: false,
 }
 
 class Input extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      showHelp: this.props.showHelp,
-    }
-
-  }
-
-  handleShowHelpText = () => {
-    this.setState({
-      showHelp: !this.state.showHelp
-    })
   }
 
   render() {
-    let { showHelp } = this.state
-    const { className, disabled, helpText, label, name, placeholder, required } = this.props
+    const {
+      className,
+      disabled,
+      description,
+      label,
+      name,
+      placeholder,
+      required,
+    } = this.props
+
     const classes = classNames(
       styles.root,
       { [`${styles['is-disabled']}`]: disabled },
@@ -48,14 +43,12 @@ class Input extends React.Component {
       className
     )
 
-
     return (
       <div className={classes}>
         <InputLabel
           name={name}
           required={required}
-          helpText={helpText}
-          showHelpText={this.handleShowHelpText}
+          description={description}
         >
           {label}
         </InputLabel>
@@ -69,7 +62,7 @@ class Input extends React.Component {
           required={required}
           type="text"
         />
-        {showHelp && <span className={styles.helpText}>{helpText}</span>}
+        {description && <span className={styles.description}>{description}</span>}
       </div>
     )
   }

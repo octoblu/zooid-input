@@ -69,15 +69,15 @@ describe('<Input />', () => {
     })
   })
 
-  describe('when given helpText props and showHelp is truthy', () => {
-    it('should render the helpText', () => {
-      const sut = mount(<Input helpText="Cats are awesome" showHelp />)
+  describe('when given description props', () => {
+    it('should render the description', () => {
+      const sut = mount(<Input description="Cats are awesome" />)
       expect(sut).to.contains.text('Cats are awesome')
     })
   })
 
-  describe('when given no helpText prop', () => {
-    it('should not render the helpText', () => {
+  describe('when given no description prop', () => {
+    it('should not render the description', () => {
       const sut = mount(<Input />)
       expect(sut.find('span')).to.not.exist
     })
