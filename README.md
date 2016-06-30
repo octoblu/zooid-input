@@ -9,12 +9,13 @@ npm install --save zooid-input
 | Prop        | Type   | Default | Description                          |
 | ----------- | -------| --------| -------------------------------------|
 | className   | string |         | Additional css classes for your input|
-| disabled    | bool   |         | Disables the text input              |
+| disabled    | bool   |  false  | Disables the text input              |
 | label       | string |         | The label for the text input         |
 | name        | string |   ' '   | name value for the input             |
 | placeholder | string |         | placeholder text for the input box   |
-| required    | bool   |         | Makes the text input required        |
+| required    | bool   |  false  | Makes the text input required        |
 | helpText    | string |         | Help text for the input field        |
+| showHelp    | bool   |  false  | Toggles help text on and off on      |
 
 
 

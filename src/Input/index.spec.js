@@ -69,9 +69,9 @@ describe('<Input />', () => {
     })
   })
 
-  describe('when given helpText props', () => {
+  describe('when given helpText props and showHelp is truthy', () => {
     it('should render the helpText', () => {
-      const sut = mount(<Input helpText="Cats are awesome" />)
+      const sut = mount(<Input helpText="Cats are awesome" showHelp />)
       expect(sut).to.contains.text('Cats are awesome')
     })
   })

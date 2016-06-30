@@ -25,3 +25,6 @@ storiesOf('Input', module)
   .addWithInfo('Help Text', 'The standard input with help text added', () => (
     <Input label="Name" helpText="This text should help" />
   ))
+  .addWithInfo('Show Help Text On Load', 'Toggles the help text to be shown', () => (
+    <Input label="Name" helpText="This text should help" showHelp />
+  ))
