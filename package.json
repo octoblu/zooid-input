@@ -1,6 +1,6 @@
 {
   "name": "zooid-input",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Input",
   "main": "dist/bundle.js",
   "scripts": {
@@ -85,6 +85,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.0.1",
-    "zooid-form-label": "^1.0.0"
+    "zooid-form-label": "^1.0.1"
   }
 }
