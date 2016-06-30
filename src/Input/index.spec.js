@@ -3,6 +3,7 @@ import chaiEnzyme from 'chai-enzyme'
 import React from 'react'
 import sinonChai from 'sinon-chai'
 import { mount, shallow } from 'enzyme'
+import FormLabel from 'zooid-form-label'
 
 import styles from './styles.css'
 import Input from './'
@@ -44,7 +45,9 @@ describe('<Input />', () => {
   describe('when given a label', () => {
     it('should render the text input with the label', () => {
       const sut = mount(<Input label="Cats4Ever" />)
-      expect(sut).to.have.prop('label', 'Cats4Ever')
+      expect(sut.containsMatchingElement(
+        <FormLabel>Cats4Ever</FormLabel>
+      )).to.equal(true)
     })
   })
 

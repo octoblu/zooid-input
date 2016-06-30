@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
+import FormLabel from 'zooid-form-label'
 
-import InputLabel from '../InputLabel/'
 import styles from './styles.css'
 
 const propTypes = {
@@ -45,13 +45,13 @@ class Input extends React.Component {
 
     return (
       <div className={classes}>
-        <InputLabel
+        <FormLabel
           name={name}
           required={required}
           description={description}
         >
           {label}
-        </InputLabel>
+        </FormLabel>
 
         <input
           {...this.props}
