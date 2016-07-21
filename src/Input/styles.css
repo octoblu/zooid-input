@@ -3,7 +3,16 @@
   flex-direction: column;
   position: relative;
   font-size: 1em;
+
+  box-sizing: border-box;
 }
+
+.root > *,
+.root > *:before,
+.root > *:after {
+  box-sizing: inherit;
+}
+
 
 .input {
   border-radius: 2px;

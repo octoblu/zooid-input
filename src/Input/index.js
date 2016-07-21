@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import blacklist from 'blacklist'
 import classNames from 'classnames'
 import FormLabel from 'zooid-form-label'
 import FormField from 'zooid-form-field'
@@ -28,7 +29,6 @@ const Input = (props) => {
     description,
     label,
     name,
-    placeholder,
     required,
   } = props
 
@@ -38,6 +38,8 @@ const Input = (props) => {
     { [`${styles['is-required']}`]: required },
     className
   )
+
+  const sanitizedProps = blacklist(props, 'className', 'description', 'label')
 
   return (
     <FormField className={classes}>
@@ -50,14 +52,11 @@ const Input = (props) => {
       </FormLabel>
 
       <input
-        {...props}
+        {...sanitizedProps}
         className={styles.input}
-        disabled={disabled}
-        name={name}
-        placeholder={placeholder}
-        required={required}
         type="text"
       />
+
       {description && <span className={styles.description}>{description}</span>}
     </FormField>
   )

@@ -28,17 +28,26 @@ describe('<Input />', () => {
     })
   })
 
-  describe('when given a name', () => {
-    it('should render the text input with the name', () => {
-      const sut = mount(<Input name="cats" />)
-      expect(sut).to.have.prop('name', 'cats')
-    })
-  })
+  describe('when given props', () => {
+    it('should sanitize and merge props on the input component', () => {
+      const sut = mount(
+        <Input
+          className="CustomClassName"
+          description="Name your device"
+          label="Device Name"
+          name="deviceName"
+          placeholder="Device name ish..."
+        />
+      )
 
-  describe('when given a placeholder', () => {
-    it('should render the text input with the placeholder', () => {
-      const sut = mount(<Input placeholder="Enter Cats Here" />)
-      expect(sut).to.have.prop('placeholder', 'Enter Cats Here')
+      const input = sut.find('input').first()
+
+      expect(input).to.not.have.prop('className', 'CustomClassName')
+      expect(input).to.not.have.prop('description', 'Name your device')
+      expect(input).to.not.have.prop('label', 'Device Name')
+
+      expect(input).to.have.prop('name', 'deviceName')
+      expect(input).to.have.prop('placeholder', 'Device name ish...')
     })
   })
 
@@ -83,14 +92,6 @@ describe('<Input />', () => {
     it('should not render the description', () => {
       const sut = mount(<Input />)
       expect(sut.find('span')).to.not.exist
-    })
-  })
-
-  describe('when given unspecified props', () => {
-    it('should merge the props with <input /> props', () => {
-      const sut = mount(<Input required />)
-      const inputField = sut.find('input[type="text"]')
-      expect(inputField).to.have.prop('required', true)
     })
   })
 })
