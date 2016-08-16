@@ -24,7 +24,7 @@ describe('<Input />', () => {
     })
 
     it('should not render the label', () => {
-      expect(sut).to.not.contain(<label />)
+      expect(sut).to.not.contain(<label htmlFor="someInput" />)
     })
   })
 

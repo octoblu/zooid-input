@@ -3,7 +3,6 @@ var webpack           = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var plugins = [
-  // new ExtractTextPlugin('bundle.css', { allChunks: true }),
   new webpack.NoErrorsPlugin(),
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.DefinePlugin({
