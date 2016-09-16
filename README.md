@@ -2,9 +2,13 @@
 A React component to render Zooid like text inputs.
 
 [![Build Status](https://travis-ci.org/octoblu/zooid-input.svg?branch=master)](https://travis-ci.org/octoblu/zooid-input)
-[![npm version](https://badge.fury.io/js/zooid-input.svg)](http://badge.fury.io/js/zooid-input)
-[![Code Climate](https://codeclimate.com/github/octoblu/zooid-input.png)](https://codeclimate.com/github/octoblu/zooid-input)
+[![Test Coverage](https://codecov.io/gh/octoblu/zooid-input/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/zooid-input)
+[![Dependency status](http://img.shields.io/david/octoblu/zooid-input.svg?style=flat)](https://david-dm.org/octoblu/zooid-input)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/zooid-input.svg?style=flat)](https://david-dm.org/octoblu/zooid-input#info=devDependencies)
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/zooid-input.svg?style=flat)](https://npmjs.org/package/zooid-input)
+
 
 
 ### Install
