@@ -1,0 +1,11 @@
+exports[`<Input /> when given no props should render 1`] = `
+<div
+  className="styles__formField___9sL2z root">
+  <input
+    className="input"
+    disabled={false}
+    name=""
+    required={false}
+    type="text" />
+</div>
+`;
