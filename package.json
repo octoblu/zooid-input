@@ -71,7 +71,7 @@
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
     "rimraf": "^2.5.2",
-    "sinon": "^1.17.4",
+    "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "stylefmt": "^4.3.0",
     "stylelint": "^7.0.3",
