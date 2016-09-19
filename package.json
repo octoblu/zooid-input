@@ -73,7 +73,7 @@
     "rimraf": "^2.5.2",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
-    "stylefmt": "^4.3.0",
+    "stylefmt": "^4.3.1",
     "stylelint": "^7.0.3",
     "stylelint-config-standard": "^13.0.0",
     "webpack": "^1.13.0"
