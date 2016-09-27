@@ -1,6 +1,6 @@
 {
   "name": "zooid-input",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Input",
   "main": "dist/bundle.js",
   "scripts": {
@@ -43,6 +43,9 @@
     "exclude": [
       "src/**/*.spec.js"
     ]
+  },
+  "greenkeeper": {
+    "emails": false
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
