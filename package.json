@@ -77,7 +77,7 @@
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "stylefmt": "^4.3.1",
-    "stylelint": "^7.3.1",
+    "stylelint": "^7.4.2",
     "stylelint-config-standard": "^13.0.2",
     "webpack": "^1.13.0"
   },
