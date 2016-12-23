@@ -28,3 +28,6 @@ storiesOf('Input', module)
   .addWithInfo('Show Help Text On Load', 'Toggles the help text to be shown', () => (
     <Input label="Name" description="This text should help" />
   ))
+  .addWithInfo('Pass in Type Password', 'Lets you modify type', () => (
+    <Input label="Name" type="password" />
+  ))

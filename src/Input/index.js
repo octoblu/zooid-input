@@ -14,6 +14,7 @@ const propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
+  type: PropTypes.string,
 }
 
 const defaultProps = {
@@ -30,6 +31,7 @@ const Input = (props) => {
     label,
     name,
     required,
+    type,
   } = props
 
   const classes = classNames(
@@ -54,7 +56,7 @@ const Input = (props) => {
       <input
         {...sanitizedProps}
         className={styles.input}
-        type="text"
+        type={type || "text"}
       />
 
       {description && <span className={styles.description}>{description}</span>}
